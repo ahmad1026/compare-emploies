@@ -1,0 +1,111 @@
+.item {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 16px;
+}
+
+.card {
+  border-right: 1px solid rgb(223, 215, 215);
+  box-sizing: border-box;
+  padding: 8px 16px;
+}
+
+.image{
+    width: 100%;
+    position: relative;
+}
+.image img{
+    width: 100%;
+    /* filter: blur(3px); */
+}
+/* .card img {
+  width: 100%;
+  position: relative;
+} */
+
+.buttun{
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+}
+
+.buttun > button{
+    outline: none;
+    border: none;
+    padding: 8px 16px;  
+    border-radius: 10px;
+    cursor: pointer;
+}
+.image:hover img{
+    filter: blur(3px);
+    transition: 0.3s;
+}
+
+.image:hover .buttun{
+    display: flex;
+    cursor: pointer;
+}
+
+.blureImsge{
+    filter: blur(3px);
+
+}
+
+
+
+.card:hover {
+  box-shadow: 6px 0px 11px -1px rgba(0, 0, 0, 0.21);
+  -webkit-box-shadow: 6px 0px 11px -1px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 6px 0px 11px -1px rgba(0, 0, 0, 0.21);
+  transition: 0.1s;
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: 50%;
+    padding: 15px;
+    border: none;
+    box-sizing: border-box;
+  }
+  .card:hover {
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .card {
+    width: 50%;
+    padding: 15px;
+    border: none;
+    box-sizing: border-box;
+  }
+  .card:hover {
+    box-shadow: none;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .card {
+    padding: none;
+    width: calc(100% / 3);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    width: calc(100% / 4);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .card {
+    width: calc(100% / 5);
+  }
+}

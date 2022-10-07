@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchUsers } from './api/getUsers'
+import Card from './components/card/Card'
+import Cards from './components/Cards/Cards'
+import Table from './components/table/Table'
+import Footer from './components/table/Table'
+export default function App() {
+    const dispatch = useDispatch()
+    const usersSlice = useSelector(state => state.users)
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    useEffect(() => {
+        dispatch({
+            type: 'users/pending',
+        })
+        fetchUsers()
+            .then(data => {
+                dispatch({
+                    type: 'users/fetchUsers',
+                    payload: data
+                })
+            })
+            .catch(e => {
+                console.log(e);
+                dispatch({
+                    type: 'users/rejected',
+                })
+
+            })
+    }, [])
+
+
+    return (
+        <>
+            <Cards/>
+            <Table/>
+        </>
+
+    )
 }
-
-export default App;
