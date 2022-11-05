@@ -14,6 +14,7 @@ export const compareReducer = (state = initState, action) => {
                 ...state,
                 emploies: [...state.emploies, action.payload].sort((a, b) => a.salary - b.salary),
                 status: 'idle',
+                
                 ides: [...state.ides, action.payload.id]
             }
         case "compare/pending":
