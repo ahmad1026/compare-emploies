@@ -1,6 +1,12 @@
-# Simple Compare Emploies App  
+# Simple Compare Emploies App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+<ul>
+<li>Create React App</li>
+<li>Redux React-Redux Redux-thunk</li>
+<li>Css Module</li>
+</ul>
 
 ## Available Scripts
 
@@ -9,6 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### `cd compare-emploies`
 
 ### `npm i`
+
 ### `json-server --watch ./db.json --port 3001`
 
 ### `npm start`
