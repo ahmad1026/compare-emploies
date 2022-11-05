@@ -4,11 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-first you should run json-server:
+### `git clone https://github.com/ahmad1026/compare-emploies.git`
+
+### `cd compare-emploies`
+
+### `npm i`
 ### `json-server --watch ./db.json --port 3001`
-
-
-In the project directory, you can run:
 
 ### `npm start`
 
