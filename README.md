@@ -4,8 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 <ul>
 <li>Create React App</li>
-<li>Redux React-Redux Redux-thunk</li>
+<li>Redux React-Redux</li>
 <li>Css Module</li>
+<li>Json-server</li>
 </ul>
 
 ## Available Scripts
